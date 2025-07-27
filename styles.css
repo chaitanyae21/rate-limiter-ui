@@ -1,0 +1,65 @@
+/*
+ * Styling for the rate limiter UI. Provides a centered panel with a simple
+ * bar representation of usage, and a clean input for adjusting the limit.
+ */
+
+:root {
+  --background: #f5f5f5;
+  --surface: #ffffff;
+  --primary: #007bff;
+  --primary-light: #cce5ff;
+  --text: #333333;
+  --border: #e0e0e0;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.rate-limiter-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.config {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.config input {
+  width: 80px;
+  padding: 4px 6px;
+  font-size: 14px;
+}
+
+.bar-container {
+  width: 100%;
+  height: 24px;
+  background-color: var(--primary-light);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 12px 0;
+}
+
+.bar-fill {
+  height: 100%;
+  background-color: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.status-text {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+}
